@@ -9,7 +9,7 @@ from bs4 import BeautifulSoup
 from sqlalchemy import Column, DateTime, Integer, String, create_engine
 from sqlalchemy.ext.declarative import declarative_base
 from sqlalchemy.orm import sessionmaker
-
+import json
 import psycopg2
 
 
