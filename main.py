@@ -1,12 +1,16 @@
-from sqlalchemy import create_engine
-from sqlalchemy.ext.declarative import declarative_base
-from sqlalchemy.orm import sessionmaker
+from svmmodel import test, predict
+from datetime import datetime
+import json
+# for i in [2, 6, 8, 10, 12, 14, 15, 17, 18, 20, 22]:
+#     print(test(start=datetime(2018, 1, 3), end=datetime(2018, 7, 1), hour=i, plot=False), i)
 
-from datetime import date, datetime
 
-db = create_engine("postgresql://postgres:admin@localhost:5432/awt")
+with open('input.json', 'r') as inp:
+    data = json.load(inp)
+prediction = []
 
-Session = sessionmaker(db)
-session = Session()
+for d in data:
+    prediction.append(dict(d, **predict(**d)))
 
-import statsmodel 
+with open('output.json', 'w') as out:
+    json.dump(prediction, out, indent=4)

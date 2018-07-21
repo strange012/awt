@@ -1,0 +1,18 @@
+[
+    {
+        "date" : "2018-08-12",
+        "airport" : "JFK",
+        "terminal" : "Terminal 1",
+        "hour" : 12,
+        "flights" : 2,
+        "total" : 452
+    },
+    {
+        "date" : "2018-08-13",
+        "airport" : "JFK",
+        "terminal" : "Terminal 1",
+        "hour" : 14,
+        "flights" : 5,
+        "total" : 1477
+    }
+]

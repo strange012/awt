@@ -1,0 +1,22 @@
+[
+    {
+        "terminal": "Terminal 1", 
+        "flights": 2, 
+        "hour": 12, 
+        "av": 35.910620185428655, 
+        "date": "2018-08-12", 
+        "max": 110.09559367250623, 
+        "total": 452, 
+        "airport": "JFK"
+    }, 
+    {
+        "terminal": "Terminal 1", 
+        "flights": 5, 
+        "hour": 14, 
+        "av": 31.642415725148247, 
+        "date": "2018-08-13", 
+        "max": 128.8470305640169, 
+        "total": 1477, 
+        "airport": "JFK"
+    }
+]
