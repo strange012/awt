@@ -68,8 +68,9 @@ ports = [str(x['value'])
 print(ports)
 
 
-
-db = create_engine("postgresql://postgres:admin@localhost:5432/awt")
+db_config = json.load(open('db_config.json'))
+db = create_engine("postgresql://{}:{}@{}:{}/{}".format(db_config['name'], db_config['user'],
+                                                             db_config['host'], db_config['port'], db_config['db']))
 base = declarative_base()
 
 
